@@ -13,4 +13,8 @@ npm run dev
 
 <img width="1120" alt="image" src="https://github.com/mrasyadc/spotify-node-architecture/assets/56964497/f1969962-cb00-46d1-a95a-e4b240490437">
 
+<img width="1120" alt="image" src="https://github.com/mrasyadc/spotify-node-architecture/assets/56964497/291769ac-2761-4784-a0c9-69bcd6ccbc7d">
 
+<img width="1120" alt="image" src="https://github.com/mrasyadc/spotify-node-architecture/assets/56964497/7c99d051-3435-45b9-896c-fd632790a9b1">
+
+![image](https://github.com/mrasyadc/spotify-node-architecture/assets/56964497/e8263fd7-af5e-4345-b19b-1537b58fd071)
