@@ -12,7 +12,7 @@ export function getAllSongInPlaylist() {
 }
 
 export function getSongInPlaylist(id) {
-  return songs.find((song) => song.id === Number.parseInt(id));
+  return playlist.find((song) => song.id === Number.parseInt(id));
 }
 
 export function addSongToPlaylist(title, url, artist) {

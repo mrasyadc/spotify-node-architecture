@@ -1,6 +1,11 @@
 import express from "express";
 
-import { addMusic, checkPlaylist, deleteSong } from "./services/transaction.js";
+import {
+  addMusic,
+  checkPlaylist,
+  deleteSong,
+  playSong,
+} from "./services/transaction.js";
 const app = express();
 
 // http body only supported on POST and PUT
@@ -33,7 +38,6 @@ app.delete("/delete-music", (req, res) => {
     if (!id) {
       throw new Error("Insufficient Parameter");
     }
-    newSong = addMusic(title, url, artist);
     res.status(201).json(deleteSong(id));
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -46,7 +50,7 @@ app.get("/play/:id", (req, res) => {
     if (!id) {
       throw new Error("Insufficient Parameter");
     }
-    res.status(201).json(playSong(id));
+    res.status(201).redirect(playSong(id));
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
