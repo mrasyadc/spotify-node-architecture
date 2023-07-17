@@ -5,6 +5,7 @@ import {
   checkPlaylist,
   deleteSong,
   playSong,
+  checkPlaylistSorted,
 } from "./services/transaction.js";
 const app = express();
 
@@ -27,6 +28,14 @@ app.post("/add-music", (req, res) => {
 app.get("/playlists", (req, res) => {
   try {
     res.json(checkPlaylist());
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.get("/playlists-sorted", (req, res) => {
+  try {
+    res.json(checkPlaylistSorted());
   } catch (e) {
     res.status(500).json({ error: e.message });
   }

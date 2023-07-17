@@ -12,6 +12,15 @@ export function getAllSongInPlaylist() {
   return playlist;
 }
 
+export function getAllSongInPlaylistSorted() {
+  if (playlist.length === 1) return playlist;
+  return playlist.sort((a, b) => {
+    if (a.count_played > b.count_played) {
+      return -1;
+    }
+  });
+}
+
 export function getSongInPlaylist(id) {
   return playlist.find((song) => song.id === Number.parseInt(id));
 }

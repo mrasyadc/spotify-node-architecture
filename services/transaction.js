@@ -1,6 +1,7 @@
 import {
   addSongToPlaylist,
   getAllSongInPlaylist,
+  getAllSongInPlaylistSorted,
   getSongInPlaylist,
   playSongFromPlaylist,
   removeSongFromPlaylist,
@@ -12,6 +13,11 @@ export function addMusic(title, url, artist) {
 
 export function checkPlaylist() {
   let allSongs = getAllSongInPlaylist();
+  return allSongs;
+}
+
+export function checkPlaylistSorted() {
+  let allSongs = getAllSongInPlaylistSorted();
   return allSongs;
 }
 
