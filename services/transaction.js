@@ -2,6 +2,7 @@ import {
   addSongToPlaylist,
   getAllSongInPlaylist,
   getSongInPlaylist,
+  playSongFromPlaylist,
   removeSongFromPlaylist,
 } from "../model/playlist.js";
 
@@ -15,7 +16,7 @@ export function checkPlaylist() {
 }
 
 export function playSong(id) {
-  return getSongInPlaylist(id).url;
+  return playSongFromPlaylist(id);
 }
 
 export function deleteSong(id) {
